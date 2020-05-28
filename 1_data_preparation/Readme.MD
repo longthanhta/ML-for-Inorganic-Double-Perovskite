@@ -1,6 +1,6 @@
 # What need to do:
 - Install pymatgen 
-
+- Run the script MP_download_porperty.py
 # Original of data
 The data of double perovskite computed structure and bandgap property are form this article:
 https://pubs.acs.org/doi/10.1021/acs.chemmater.9b00116
