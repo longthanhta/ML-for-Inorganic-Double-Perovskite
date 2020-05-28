@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import csv
 import math
+import os
 from ase.io import read,write
 from ase import Atoms
 
@@ -82,13 +83,17 @@ if __name__ == "__main__":
 #	print(mpr.query({'material_id': 'mp-555599'}, ['band_gap']))
 
 
-df_input = pd.read_csv('1_MP_ID_updated_only_A2BBX6.csv')
+df_input = pd.read_csv('MP_ID_updated_only_A2BBX6.csv')
 ID_list=df_input['Material ID']
 m = MPRester('0bwL1euo5ydiIRfTZ')
 
 
 # Creat empty list to append
 final_frame=[]
+try:
+	os.mkdir('cif')
+except:
+	print('cif folder already exist')
 
 
 data_length=len(ID_list)
